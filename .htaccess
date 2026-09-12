@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# 1. Hide .php extension in URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# 2. Redirect .php to non-extension version (Excluding POST requests to preserve payloads)
+RewriteCond %{REQUEST_METHOD} !POST
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+(.+)\.php[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# 3. Redirect index to root
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/index(\.php)?[\s?] [NC]
+RewriteRule ^index(\.php)?$ / [R=301,L]

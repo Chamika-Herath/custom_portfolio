@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://heraforce.com/sitemap.xml
