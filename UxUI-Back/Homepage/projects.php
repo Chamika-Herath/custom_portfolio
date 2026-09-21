@@ -1,4 +1,4 @@
-<section id="projects" style="padding: clamp(80px, 12vh, 120px) 0; background: url('/assets/images/hero_background.png') center/cover no-repeat fixed #000000; position: relative; overflow: hidden; transition: 0.3s;">
+<section id="projects" style="padding: clamp(80px, 12vh, 120px) 0; background: transparent; position: relative; overflow: hidden; transition: 0.3s; border-top: 1px solid rgba(0, 229, 255, 0.1);">
     <!-- Cinematic Overlay (Lighter to show the bright starry mountains) -->
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0,0.25) 50%, #000000 100%); opacity: 0.8; z-index: 1; pointer-events: none;"></div>
 

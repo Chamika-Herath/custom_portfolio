@@ -1,4 +1,4 @@
-<section id="video-showcase" style="padding: clamp(80px, 12vh, 120px) 0; background: url('/assets/images/bg_video_showcase.png') center/cover no-repeat #000000; position: relative; overflow: hidden;">
+<section id="video-showcase" style="padding: clamp(80px, 12vh, 120px) 0; background: rgba(6, 11, 19, 0.3); position: relative; overflow: hidden; border-top: 1px solid rgba(16, 185, 129, 0.2);">
     <!-- Cinematic Overlay -->
     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0,0.55) 50%, #000000 100%); opacity: 0.95; z-index: 1; pointer-events: none;"></div>
     <!-- Decorative background element -->

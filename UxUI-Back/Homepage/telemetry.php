@@ -1,4 +1,4 @@
-<section id="telemetry" style="padding: 100px 0; background: linear-gradient(to right, #10241a, var(--bg-main)); position: relative; overflow: hidden; border-top: 1px solid rgba(212, 188, 143, 0.1);">
+<section id="telemetry" style="padding: 100px 0; background: rgba(2, 44, 34, 0.4); position: relative; overflow: hidden; border-top: 1px solid rgba(16, 185, 129, 0.2);">
     
     <!-- Background Decor -->
     <div style="position: absolute; right: 0; bottom: 0; width: 60vw; height: 100%; background: url('/assets/images/user_suit.jpg') center/cover no-repeat; opacity: 0.05; filter: grayscale(100%); mix-blend-mode: overlay; pointer-events: none;"></div>

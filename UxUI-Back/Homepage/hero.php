@@ -1,33 +1,35 @@
-<section id="hero" style="display: flex; align-items: center; justify-content: center; padding: 180px 0 100px; position: relative; overflow: hidden; background: var(--bg-main);">
+<section id="hero" style="display: flex; align-items: center; justify-content: center; padding: 180px 0 100px; position: relative; overflow: hidden; background: transparent;">
     
-    <!-- Ambient Luxury Blur Orbs -->
-    <div class="ambient-orb" style="position: absolute; top: -10%; left: -5%; width: 600px; height: 600px; background: rgba(212, 188, 143, 0.08); filter: blur(150px); border-radius: 50%; z-index: 1; pointer-events: none; animation: floatOrb 20s ease-in-out infinite alternate;"></div>
-    <div class="ambient-orb" style="position: absolute; bottom: -20%; right: -10%; width: 700px; height: 700px; background: rgba(19, 42, 30, 0.4); filter: blur(150px); border-radius: 50%; z-index: 1; pointer-events: none; animation: floatOrb 25s ease-in-out infinite alternate-reverse;"></div>
+    <!-- Dark Gradient Overlay for the Cover Photo -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(6, 11, 19, 0.95) 0%, rgba(6, 11, 19, 0.5) 100%); z-index: 0;"></div>
+    
+    <!-- Interactive Three.js Particle Grid -->
+    <canvas id="hero-gl" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;"></canvas>
     
     <div class="container" style="position: relative; z-index: 10; width: 100%; max-width: 1200px;">
         <div class="hero-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; width: 100%;">
             
             <!-- Left Column: Content -->
             <div class="hero-content parallax-layer" data-speed="0.05" style="display: flex; flex-direction: column; gap: 24px; text-align: left; align-items: flex-start; z-index: 10; transition: transform 0.15s ease-out;">
-                <h1 class="entrance-anim" style="--delay: 1; font-size: clamp(2.2rem, 4vw, 3.8rem); font-weight: 800; line-height: 1.1; letter-spacing: -1.5px; width: 100%; text-shadow: 0 10px 40px rgba(0,0,0,0.5);">
-                    <span style="color: #ffffff;">Where Art,</span><br>
-                    <span style="background: linear-gradient(90deg, var(--primary) 0%, #fff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Innovation & Elite</span><br>
-                    <span style="color: #ffffff;">Engineering Converge</span>
+                <h1 class="hero-reveal" style="font-size: clamp(2.2rem, 4vw, 3.8rem); font-weight: 800; line-height: 1.1; letter-spacing: -1.5px; width: 100%; text-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+                    <span style="color: #ffffff;">Engineering</span><br>
+                    <span style="background: linear-gradient(90deg, #4ade80 0%, #fff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Scalable Systems</span><br>
+                    <span style="color: #ffffff;">& Seamless Experiences</span>
                 </h1>
                 
-                <p class="entrance-anim" style="--delay: 2; max-width: 580px; color: var(--text-dim); font-size: clamp(1.05rem, 1.2vw, 1.15rem); line-height: 1.8; font-weight: 400;">
-                    Welcome to the personal portfolio of <span style="color: #ffffff; font-weight: 600;"><?php echo $company_info->get_compnay_name(); ?></span>.<br> Explore a curated canvas of interactive digital art, experimental tech innovations, and high-performance software systems.
+                <p class="hero-reveal" style="max-width: 580px; color: var(--text-dim); font-size: clamp(1.05rem, 1.2vw, 1.15rem); line-height: 1.8; font-weight: 400;">
+                    Hi, I'm <span style="color: #ffffff; font-weight: 600;">Chamika Herath</span>, a Results-Driven Web Developer.<br> I specialize in PHP, MySQL, ReactJS, and Node.js to engineer scalable backend architectures and robust commercial-grade software solutions.
                 </p>
                 
-                <div class="entrance-anim" style="--delay: 3; display: flex; flex-direction: column; align-items: flex-start; gap: 20px;">
+                <div class="hero-reveal" style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px;">
                     <a href="#projects" class="luxury-btn">
-                        <span>View Integrated Portfolio</span>
+                        <span>Explore My Projects</span>
                         <div class="btn-glow"></div>
                     </a>
                     
                     <div style="display: flex; align-items: center; gap: 12px; color: var(--text-dim); font-size: 0.85rem; font-weight: 600;">
-                        <i data-lucide="eye" style="width: 16px; color: var(--primary);"></i>
-                        <span>Witness the horizon of design power and absolute logic</span>
+                        <i data-lucide="code" style="width: 16px; color: #4ade80;"></i>
+                        <span>Bridging high-performance logic with commercial solutions</span>
                     </div>
                 </div>
             </div>
@@ -35,9 +37,9 @@
             <!-- Right Column: 3D Asset Window -->
             <div class="hero-parallax-scene" id="parallax-scene" style="position: relative; width: 100%; max-width: 440px; margin: 0 auto; display: flex; align-items: center; justify-content: center; perspective: 1000px; transform-style: preserve-3d; cursor: pointer;">
                 
-                <div class="parallax-layer reveal" data-speed="0.15" data-z="20px" style="position: relative; z-index: 5; transition: transform 0.2s ease-out; transform-style: preserve-3d; width: 100%;">
-                    <div class="portrait-container" style="position: relative; width: 100%; padding-bottom: 100%; border-radius: 30px; overflow: hidden; background: rgba(0, 0, 0, 0.2); box-shadow: 0 40px 80px rgba(0,0,0,0.6), -10px -10px 30px rgba(212, 188, 143, 0.05);">
-                        <img src="/assets/images/wooden_queen_portrait.png" alt="HeraForce Queen Core Asset" style="position: absolute; top:0; left:0; width: 100%; height: 100%; object-fit: cover; transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                <div class="parallax-layer hero-avatar-reveal" data-speed="0.15" data-z="20px" style="position: relative; z-index: 5; transition: transform 0.2s ease-out; transform-style: preserve-3d; width: 100%;">
+                    <div class="portrait-container" style="position: relative; width: 100%; padding-bottom: 100%; border-radius: 50%; overflow: hidden; background: rgba(0, 0, 0, 0.2); box-shadow: 0 0 60px rgba(34, 197, 94, 0.3), -10px -10px 30px rgba(34, 197, 94, 0.05); border: 2px solid rgba(74, 222, 128, 0.5);">
+                        <img src="/assets/images/chmika-herath.jpeg" alt="Chamika Herath" style="position: absolute; top:0; left:0; width: 100%; height: 100%; object-fit: cover; transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                     </div>
                 </div>
             </div>
@@ -48,20 +50,10 @@
 
 <style>
     /* Luxury UI Animations & Components */
-    @keyframes floatOrb {
-        0% { transform: translate(0, 0) scale(1); }
-        100% { transform: translate(80px, 50px) scale(1.1); }
-    }
 
-    .entrance-anim {
+    .hero-reveal, .hero-avatar-reveal {
         opacity: 0;
-        transform: translateY(40px);
-        animation: smoothEntrance 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        animation-delay: calc(var(--delay) * 0.15s);
-    }
-    
-    @keyframes smoothEntrance {
-        100% { opacity: 1; transform: translateY(0); }
+        visibility: hidden;
     }
 
     /* Glassmorphic Luxury CTA Button */
@@ -71,15 +63,15 @@
         align-items: center;
         justify-content: center;
         padding: 18px 45px;
-        background: rgba(212, 188, 143, 0.05); /* very transparent gold */
-        color: var(--primary);
+        background: rgba(74, 222, 128, 0.05); /* transparent green */
+        color: #4ade80;
         text-decoration: none;
         font-weight: 800;
         border-radius: 100px;
         font-size: 0.85rem;
         text-transform: uppercase;
         letter-spacing: 2px;
-        border: 1px solid rgba(212, 188, 143, 0.3);
+        border: 1px solid rgba(74, 222, 128, 0.3);
         backdrop-filter: blur(10px);
         overflow: hidden;
         transition: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -88,17 +80,17 @@
     .luxury-btn span { position: relative; z-index: 2; transition: 0.3s; }
     .luxury-btn .btn-glow {
         position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(212, 188, 143, 0.4), transparent);
+        background: linear-gradient(90deg, transparent, rgba(74, 222, 128, 0.4), transparent);
         transition: 0.5s; z-index: 1;
     }
     .luxury-btn:hover {
-        background: var(--primary);
+        background: #4ade80;
         color: var(--bg-main);
-        box-shadow: 0 20px 40px rgba(212, 188, 143, 0.3);
+        box-shadow: 0 20px 40px rgba(74, 222, 128, 0.3);
         transform: translateY(-5px);
-        border-color: var(--primary);
+        border-color: #4ade80;
     }
-    .luxury-btn:hover span { color: #10241a; }
+    .luxury-btn:hover span { color: #060b13; }
     .luxury-btn:hover .btn-glow { left: 100%; transition: 0.7s; }
 
     /* CSS Rotating Seal Keyframes */
@@ -140,9 +132,9 @@
         }
         .portrait-container {
             width: 280px !important;
-            height: 340px !important;
+            height: 280px !important;
             padding-bottom: 0 !important;
-            border-radius: 20px !important;
+            border-radius: 50% !important;
             margin: 0 auto !important;
         }
     }
@@ -257,6 +249,107 @@
 
             // Start the interactive loop initially
             startLoop();
+        }
+
+        // --- GSAP TEXT & AVATAR REVEAL TIMELINE ---
+        if (typeof gsap !== 'undefined') {
+            const heroTl = gsap.timeline({ defaults: { ease: "power4.out" } });
+            
+            // Set visibility to visible, animate from opacity 0 to opacity 1
+            gsap.set(".hero-reveal, .hero-avatar-reveal", { visibility: "visible" });
+
+            // 1. Text elements stagger from bottom up smoothly
+            heroTl.fromTo(".hero-reveal", 
+                { y: 80, opacity: 0 },
+                { y: 0, opacity: 1, duration: 1.5, stagger: 0.15, delay: 0.2 }
+            );
+
+            // 2. Avatar deeply elastic pop out animation overlapping the text
+            heroTl.fromTo(".hero-avatar-reveal", 
+                { scale: 0.4, opacity: 0, rotation: -25 },
+                { scale: 1, opacity: 1, rotation: 0, duration: 2.2, ease: "elastic.out(1, 0.6)" },
+                "-=1.2"
+            );
+
+            // 3. Ambient slow organic floating motion applied continuously to the avatar (on complete to avoid interrupting pop)
+            heroTl.add(() => {
+                gsap.to(".hero-avatar-reveal", {
+                    y: 15,
+                    rotation: 2,
+                    duration: 3,
+                    yoyo: true,
+                    repeat: -1,
+                    ease: "sine.inOut"
+                });
+            });
+        }
+
+        // --- THREE.JS & GSAP INTEGRATION ---
+        if (typeof THREE !== 'undefined' && typeof gsap !== 'undefined') {
+            const canvas = document.getElementById('hero-gl');
+            if (canvas) {
+                const scene = new THREE.Scene();
+                const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+                const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+
+                renderer.setSize(window.innerWidth, window.innerHeight);
+                renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+                const particlesGeometry = new THREE.BufferGeometry();
+                const particlesCount = 800;
+                const posArray = new Float32Array(particlesCount * 3);
+
+                for(let i = 0; i < particlesCount * 3; i++) {
+                    posArray[i] = (Math.random() - 0.5) * 15;
+                }
+                particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+
+                const particlesMaterial = new THREE.PointsMaterial({
+                    size: 0.03,
+                    color: 0x4ade80,
+                    transparent: true,
+                    opacity: 0.8,
+                    blending: THREE.AdditiveBlending
+                });
+
+                const particleMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+                scene.add(particleMesh);
+                camera.position.z = 3;
+
+                let tMouseX = 0;
+                let tMouseY = 0;
+                window.addEventListener('mousemove', (event) => {
+                    tMouseX = (event.clientX / window.innerWidth) * 2 - 1;
+                    tMouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+                });
+
+                gsap.to(particleMesh.rotation, {
+                    y: Math.PI * 2,
+                    duration: 50,
+                    repeat: -1,
+                    ease: "none"
+                });
+
+                const clock = new THREE.Clock();
+
+                const tick = () => {
+                    const elapsedTime = clock.getElapsedTime();
+                    
+                    particleMesh.position.y = Math.sin(elapsedTime * 0.5) * 0.1;
+                    particleMesh.rotation.x += (tMouseY * 0.15 - particleMesh.rotation.x) * 0.05;
+                    particleMesh.rotation.y += (tMouseX * 0.15 - particleMesh.rotation.y) * 0.05;
+
+                    renderer.render(scene, camera);
+                    window.requestAnimationFrame(tick);
+                }
+                tick();
+
+                window.addEventListener('resize', () => {
+                    camera.aspect = window.innerWidth / window.innerHeight;
+                    camera.updateProjectionMatrix();
+                    renderer.setSize(window.innerWidth, window.innerHeight);
+                });
+            }
         }
     });
 </script>

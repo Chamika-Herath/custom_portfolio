@@ -1,4 +1,4 @@
-<section id="architect" style="padding: 120px 0; background: var(--bg-main); position: relative; overflow: hidden; border-top: 1px solid rgba(212, 188, 143, 0.1);">
+<section id="architect" style="padding: 120px 0; background: rgba(6, 11, 19, 0.4); position: relative; overflow: hidden; border-top: 1px solid rgba(0, 229, 255, 0.1);">
     <div class="container" style="max-width: 1400px; width: 90%; margin: 0 auto; position: relative; z-index: 10;">
         
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;" class="architect-grid">

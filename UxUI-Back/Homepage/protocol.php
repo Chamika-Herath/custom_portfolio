@@ -1,9 +1,9 @@
-<section id="protocol" style="padding: 120px 0; background: var(--bg-main); position: relative; overflow: hidden; border-top: 1px solid rgba(212, 188, 143, 0.1);">
+<section id="protocol" style="padding: 120px 0; background: transparent; position: relative; overflow: hidden; border-top: 1px solid rgba(0, 229, 255, 0.1);">
     <div class="container" style="max-width: 1200px; width: 90%; margin: 0 auto; position: relative; z-index: 10;">
         
         <div style="text-align: center; margin-bottom: 90px;">
             <h2 class="reveal" style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; color: #fff; margin: 0; letter-spacing: -1px;">
-                The <span style="color: var(--primary);"><?php echo $company_info->get_compnay_short_name(); ?></span> Protocol
+                The <span style="color: var(--primary);">HeraForce</span> Protocol
             </h2>
         </div>
 

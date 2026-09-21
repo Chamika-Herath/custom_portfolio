@@ -1,4 +1,4 @@
-<section id="projects" style="padding: 100px 0; background: var(--bg-main); position: relative; overflow: hidden;">
+<section id="projects" style="padding: 100px 0; background: rgba(6, 11, 19, 0.1); position: relative; overflow: hidden; border-top: 1px solid rgba(0, 229, 255, 0.1);">
     <div style="max-width: 1600px; width: 100%; margin: 0 auto; position: relative; z-index: 10;">
         
         <div style="padding: 0 5%; margin-bottom: 50px; text-align: center;">

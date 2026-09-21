@@ -1,4 +1,4 @@
-<section id="arsenal" style="padding: 120px 0; background: var(--bg-main); position: relative; overflow: hidden; border-top: 1px solid rgba(212, 188, 143, 0.1);">
+<section id="arsenal" style="padding: 120px 0; background: rgba(6, 11, 19, 0.5); position: relative; overflow: hidden; border-top: 1px solid rgba(16, 185, 129, 0.2);">
     
     <!-- Background Decor -->
     <div style="position: absolute; top: -100px; left: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(212,188,143,0.03) 0%, transparent 70%); border-radius: 50%;"></div>

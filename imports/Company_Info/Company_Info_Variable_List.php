@@ -9,12 +9,12 @@ class Company_Info_Variable_List
     private $company_logo_icon = "https://heraforce.com/assets/images/heraforce_cyber_queen_logo_1778267022286J.png";
     private $company_logo_url = "https://heraforce.com/assets/images/heraforce_cyber_queen_logo_1778267022286J.png";
     private $footer_txt = "I";
-    private $company_name = "CHAMIKA HERATH";
+    private $company_name = "HERAFORCE";
     private $company_web = "https://heraforce.com/";
     private $full_company_web = "https://heraforce.com/";
     private $default_sending_email = "info@heraforce.com";
     private $system_problem_sending_email = "info@heraforce.com";
-    private $company_short_name = "CHAMIKA HERATH";
+    private $company_short_name = "HERAFORCE";
     //-----------------------------------------------------------------------------------------------------------   
     private $company_whatup_number = "947";
     private $whatusp_url_to_revice_message = "";

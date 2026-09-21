@@ -22,23 +22,17 @@ class DataBase
 
     public function __construct()
     {
-               $this->servername = "localhost";
-               $this->username = "root";
-               $this->password = "";
-             //  $this->dbname = "heraforce";
-
-
-
-
-
-
-      
+       
         // $this->servername = "localhost";
         // $this->username = "u511731669_roothera";
         // $this->password = "@5Ej=sbAWui";
-         $this->dbname = "u511731669_heraforce";
+        // $this->dbname = "u511731669_heraforce";
 
-    
+
+        $this->servername = "localhost";
+        $this->username = "root";
+        $this->password = "";
+        $this->dbname = "u511731669_heraforce";
       
 
        

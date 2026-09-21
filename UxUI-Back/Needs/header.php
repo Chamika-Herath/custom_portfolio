@@ -2,12 +2,12 @@
 <div class="global-bg-canvas"></div>
 
 <!-- SLdrawing Style Dynamic Island Header (Re-architected) -->
-<header id="main-header" style="position: fixed; top: 25px; left: 50%; transform: translateX(-50%); z-index: 1000; background: linear-gradient(135deg, #dcc69c 0%, #ba9c5e 100%); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px); border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 100px; padding: 12px 25px; box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 30px rgba(212, 188, 143, 0.15); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), top 0.4s cubic-bezier(0.16, 1, 0.3, 1); display: flex; align-items: center; justify-content: space-between; width: 92%; max-width: 1000px;">
+<header id="main-header" style="position: fixed; top: 25px; left: 50%; transform: translateX(-50%); z-index: 1000; background: linear-gradient(135deg, rgba(6, 11, 19, 0.85) 0%, rgba(0, 229, 255, 0.15) 100%); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px); border: 1px solid rgba(0, 229, 255, 0.2); border-radius: 100px; padding: 12px 25px; box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 30px rgba(0, 229, 255, 0.15); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), top 0.4s cubic-bezier(0.16, 1, 0.3, 1); display: flex; align-items: center; justify-content: space-between; width: 92%; max-width: 1000px;">
     
     <!-- Logo -->
     <a href="index<?php echo isset($online_offline_extention) ? $online_offline_extention : ''; ?>" class="header-logo" style="text-decoration: none; display: flex; align-items: center; gap: 12px;">
-        <img src="<?php echo $company_info->get_compnay_logo_icon_url(); ?>" alt="<?php echo $company_info->get_compnay_short_name(); ?> Logo" style="height: 34px; width: auto; border-radius: 50%; padding: 2px;">
-        <span style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 900; letter-spacing: 1px; color: #132a1e;"><?php echo $company_info->get_compnay_short_name(); ?></span>
+        <img src="/assets/images/heraforce_cyber_queen_logo_1778267022286J.png" alt="HeraForce Logo" style="height: 34px; width: auto; border-radius: 50%; padding: 2px;">
+        <span style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 900; letter-spacing: 1px; color: #ffffff;">HERAFORCE</span>
     </a>
 
     <!-- Central Pill Navigation -->
@@ -50,13 +50,13 @@
 <!-- Mobile Menu Overlay Framework (Retained structure) -->
 <div id="mobile-menu-overlay" class="mobile-menu-overlay">
     <div class="mobile-menu-content">
-        <!-- Watermark -->
-        <img src="<?php echo $company_info->get_compnay_logo_icon_url(); ?>" alt="Watermark" style="position: absolute; bottom: -50px; right: -50px; width: 300px; opacity: 0.04; filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.4)); pointer-events: none; z-index: 1;">
+        <!-- Orange Cyberqueen Watermark -->
+        <img src="/assets/images/heraforce_cyber_queen_logo_1778267022286J.png" alt="Watermark" style="position: absolute; bottom: -50px; right: -50px; width: 300px; opacity: 0.04; filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.4)); pointer-events: none; z-index: 1;">
         
         <div class="mobile-menu-header" style="position: relative; z-index: 10;">
             <a href="index<?php echo isset($online_offline_extention) ? $online_offline_extention : ''; ?>" style="text-decoration: none; display: flex; align-items: center; gap: 15px;">
-                <img src="<?php echo $company_info->get_compnay_logo_icon_url(); ?>" alt="Logo" style="height: 38px; width: auto;">
-                <span style="font-family: 'Outfit', sans-serif; font-size: 1.3rem; font-weight: 900; color: #fff;"><?php echo $company_info->get_compnay_short_name(); ?></span>
+                <img src="/assets/images/heraforce_cyber_queen_logo_1778267022286J.png" alt="Logo" style="height: 38px; width: auto;">
+                <span style="font-family: 'Outfit', sans-serif; font-size: 1.3rem; font-weight: 900; color: #fff;">HERAFORCE</span>
             </a>
             <button onclick="toggleMobileMenu()" style="background: none; border: none; color: #38bdf8; cursor: pointer; padding: 5px;">
                 <i data-lucide="x" style="width:24px; height:24px;"></i>
@@ -119,7 +119,7 @@
 
     /* Capsule Pill Links */
     .nav-pill-link {
-        color: rgba(19, 42, 30, 0.85); /* Dark green */
+        color: rgba(255, 255, 255, 0.85); /* Light cool text */
         text-decoration: none;
         font-weight: 600;
         font-size: 0.9rem;
@@ -132,10 +132,10 @@
         border: 1px solid transparent;
     }
     .nav-pill-link:hover {
-        color: #132a1e;
-        background: rgba(19, 42, 30, 0.08);
-        border: 1px solid rgba(19, 42, 30, 0.15);
-        box-shadow: 0 0 15px rgba(19, 42, 30, 0.05);
+        color: #ffffff;
+        background: rgba(0, 229, 255, 0.15);
+        border: 1px solid rgba(0, 229, 255, 0.3);
+        box-shadow: 0 0 15px rgba(0, 229, 255, 0.1);
     }
     
     /* Login Action Button inside Capsule */
@@ -146,24 +146,24 @@
         gap: 8px; 
         padding: 10px 22px; 
         border-radius: 100px; 
-        background: rgba(19, 42, 30, 0.08); 
-        border: 1px solid rgba(19, 42, 30, 0.2); 
-        color: #132a1e; 
+        background: rgba(0, 229, 255, 0.1); 
+        border: 1px solid rgba(0, 229, 255, 0.3); 
+        color: #00e5ff; 
         font-size: 0.9rem; 
         font-weight: 700; 
         transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
     .btn-login-pill:hover {
-        background: #132a1e;
-        color: #d4bc8f;
-        box-shadow: 0 8px 25px rgba(19, 42, 30, 0.2);
+        background: #00e5ff;
+        color: #060b13;
+        box-shadow: 0 8px 25px rgba(0, 229, 255, 0.3);
         transform: translateY(-2px);
     }
     
     /* Dropdown Hover Rotations */
     .dropdown:hover .nav-pill-link i {
         transform: rotate(180deg);
-        color: #132a1e;
+        color: #ffffff;
         opacity: 1 !important;
     }
     .dropdown .nav-pill-link i {
@@ -178,13 +178,13 @@
         left: 50%;
         transform: translateX(-50%);
         min-width: 240px;
-        background: rgba(19, 42, 30, 0.96); /* Dark Green Background */
+        background: rgba(6, 11, 19, 0.96); /* Dark Navy Background */
         backdrop-filter: blur(25px);
         -webkit-backdrop-filter: blur(25px);
         border: 1px solid var(--primary);
         border-radius: 16px;
         padding: 12px 0;
-        box-shadow: 0 25px 50px rgba(0,0,0,0.8), 0 0 20px rgba(212, 188, 143, 0.1);
+        box-shadow: 0 25px 50px rgba(0,0,0,0.8), 0 0 20px rgba(0, 229, 255, 0.15);
         z-index: 10000;
         animation: dropSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
@@ -225,10 +225,10 @@
         transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
     .dropdown-content a:hover {
-        background: rgba(212, 188, 143, 0.08); /* gold tint */
+        background: rgba(0, 229, 255, 0.08); /* cyan tint */
         color: #fff;
         padding-left: 32px;
-        text-shadow: 0 0 8px rgba(212, 188, 143, 0.3);
+        text-shadow: 0 0 8px rgba(0, 229, 255, 0.3);
     }
     .dropdown-content a:hover::before {
         opacity: 1;
@@ -315,10 +315,10 @@
             
             // Subtle compacting when not at the absolute top
             if (currentScrollY > 50) {
-                header.style.background = 'linear-gradient(135deg, rgba(220,198,156,0.95) 0%, rgba(186,156,94,0.95) 100%)';
+                header.style.background = 'linear-gradient(135deg, rgba(6,11,19,0.95) 0%, rgba(0,119,255,0.7) 100%)';
                 header.style.padding = '10px 25px';
             } else {
-                header.style.background = 'linear-gradient(135deg, #dcc69c 0%, #ba9c5e 100%)';
+                header.style.background = 'linear-gradient(135deg, rgba(6, 11, 19, 0.85) 0%, rgba(0, 229, 255, 0.15) 100%)';
                 header.style.padding = '12px 25px';
             }
             

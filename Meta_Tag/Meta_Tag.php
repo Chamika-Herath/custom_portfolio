@@ -22,8 +22,8 @@ $page_img = $page_img ?? "$base_url/assets/images/heraforce_og_preview_1200x630.
 <meta name="yandex-verification" content="ADD_YOUR_YANDEX_CODE_HERE" />
 
 <!-- Robots Control -->
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="bingbot" content="noindex, nofollow">
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-594R9S58LB"></script>
@@ -78,24 +78,29 @@ $page_img = $page_img ?? "$base_url/assets/images/heraforce_og_preview_1200x630.
 <!-- Lucide Icons -->
 <script src="https://unpkg.com/lucide@latest"></script>
 
+<!-- GSAP & Three.js Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
 <style>
     :root {
         /* Brand Colors */
-        --primary: #d4bc8f; /* Elite Matte Gold */
-        --primary-glow: rgba(212, 188, 143, 0.4);
-        --gradient: linear-gradient(135deg, #d4bc8f 0%, #c4a770 50%, #a48149 100%);
+        --primary: #00e5ff; /* Cyan glowing */
+        --primary-glow: rgba(0, 229, 255, 0.4);
+        --gradient: linear-gradient(135deg, #00e5ff 0%, #0077ff 50%, #4a00e0 100%);
         
         /* Dark Theme Variables */
-        --bg-main: #132a1e; /* Deep Forest Green */
-        --bg-card: rgba(255, 255, 255, 0.05); /* Slight lightening for cards on green */
-        --bg-card-hover: rgba(255, 255, 255, 0.08); /* Brighter hover */
+        --bg-main: #060b13; /* Deep navy/slate */
+        --bg-card: rgba(255, 255, 255, 0.03); /* Slight lightening for cards */
+        --bg-card-hover: rgba(255, 255, 255, 0.06); /* Brighter hover */
         --text-main: #ffffff;
-        --text-dim: #c5cdca; /* Slightly green-tinted light grey */
-        --border-main: rgba(212, 188, 143, 0.15); /* Gold tinted border */
-        --nav-bg: rgba(19, 42, 30, 0.85); /* Green nav background */
-        --nav-sticky: rgba(19, 42, 30, 0.95); /* Deeper green sticky background */
-        --glass-bg: rgba(19, 42, 30, 0.6);
-        --shadow-main: rgba(0, 0, 0, 0.6);
+        --text-dim: #9ba4b5; /* cool tinted light grey */
+        --border-main: rgba(0, 229, 255, 0.15); /* Cyan tinted border */
+        --nav-bg: rgba(6, 11, 19, 0.85); /* Navy nav background */
+        --nav-sticky: rgba(6, 11, 19, 0.95); /* Deeper navy sticky background */
+        --glass-bg: rgba(6, 11, 19, 0.6);
+        --shadow-main: rgba(0, 0, 0, 0.8);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -196,7 +201,7 @@ $page_img = $page_img ?? "$base_url/assets/images/heraforce_og_preview_1200x630.
     /* Custom Scrollbar */
     ::-webkit-scrollbar { width: 10px; }
     ::-webkit-scrollbar-track { background: var(--bg-main); }
-    ::-webkit-scrollbar-thumb { background: rgba(212, 188, 143, 0.2); border-radius: 5px; }
+    ::-webkit-scrollbar-thumb { background: rgba(0, 229, 255, 0.2); border-radius: 5px; }
     ::-webkit-scrollbar-thumb:hover { background: var(--primary); }
 
     /* Responsive Grid Helper */
